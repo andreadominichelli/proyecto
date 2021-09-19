@@ -5,19 +5,15 @@ document.addEventListener("DOMContentLoaded", function(e){
 
 });
 
-//ESTOOO//
+var usuario= document.getElementById ('email');
 
 function logear() {
-    var usuario= document.getElementById ('email');
     var contra= document.getElementById ('contraseña');
     if (usuario.value !=='' && contra.value !=='') {
-        sessionStorage.setItem ('logeado',true);
+        sessionStorage.setItem ('logeado', usuario.value);
         location.replace("index.html");
     }
 }
-    //ESTO ES LO NUEVO //
-
-
 
 
 function cargarErrores(id, idMensaje) {
@@ -33,3 +29,4 @@ function cargarErrores(id, idMensaje) {
         elementError.style.display = "none";
     }
 }
+

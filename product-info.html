@@ -23,37 +23,121 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <a class="py-2 d-none d-md-inline-block" id="nombreUsuario"></a>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  <div class="card-group" id="productInfoName"> 
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Producto</h2>
+        <p class="lead">Encontrarás aquí toda la información del artículo seleccionado.</p>
+        <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
+          seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
+      </div>
+      <h3 id="categoryName"></h3>
+      <hr class="my-3">
+      <dl>
+        <dt>Descripción</dt>
+        <dd>
+          <p id="categoryDescription"></p>
+        </dd>
+
+        <dt>Precio</dt>
+        <dd>
+          <p id="precio"></p>
+        </dd>
+
+        <dt>Vendidos</dt>
+        <dd>
+          <p id="vendidos"></p>
+        </dd>
+        <dt>Categorías</dt>
+        <dd>
+          <a id="category" href="products.html">Autos</a>
+        </dd>
+        <dt>Imágenes ilustrativas</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+          </div>
+        </dd>
+        <dt>Comentarios</dt>
+      <div id="contenedorComentarios" class="w-100"></div>
+      <p></p>
+      </dl>
+    </div>
+    <form class="container w-100">
+      <ul>
+          <div class="container flex-md-row">
+              <div class="card border-dark mb-3">
+                  <div class=" w-100 h-100">
+                    <p></p>
+                      <div class="card-header">Comentar
+                      </div>
+                      <textarea name="mensaje" class="w-100" id="mensaje">  </textarea> <br/><br/>
+
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Calificación</label>
+                        <select id="cantidadestrellas" class="form-control" id="exampleFormControlSelect1">
+                        <option ★>1 </option>
+                        <option ★★>2 </option>
+                        <option ★★★> 3 </option>
+                        <option ★★★★>4 </option>
+                        <option ★★★★★> 5 </option>
+                      </select>
+                    </div>
+                      <!-- <div class="puntuacion">
+                          <input id="radio1" type="radio" name="estrellas" value="5" onclick="document.getElementById('valor').innerHTML='5'">
+                          
+        <label for="radio1">★</label>
+                          
+        <input id="radio2" type="radio" name="estrellas" value="4" onclick="document.getElementById('valor').innerHTML='4'">
+                          
+        <label for="radio2">★</label>
+                          
+        <input id="radio3" type="radio" name="estrellas" value="3" onclick="document.getElementById('valor').innerHTML='3'">
+                         
+        <label for="radio3">★</label>
+                          
+        <input id="radio4" type="radio" name="estrellas" value="2" onclick="document.getElementById('valor').innerHTML='2'">
+                          
+        <label for="radio4">★</label>
+                          
+        <input id="radio5" type="radio" name="estrellas" value="1" onclick="document.getElementById('valor').innerHTML='1'">
+                          
+        <label for="radio5">★</label><br>
+
+                      </div> --><br> Puntuación
+                     <!--  <span id="valor"></span> -->
+
+<br>
+                    <span id="error"class="text-danger"></span>
+                    
+                      <input type="button" value="Enviar ahora" onclick="añadirComment()" />
+                  </div>
+                  </li>
+
+
+              </div>
+
+          </div>
+      </ul>
+  </form>
     </div>
   </div>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-right">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-    </div>
-  </footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
+  </div>
+</div>
+      <div id="spinner-wrapper"></div>
       <div></div>
       <div></div>
       <div></div>
     </div>
   </div>
+  <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos relacionados</a>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="js/estrellas.js"></script>
 </body>
 
 </html>

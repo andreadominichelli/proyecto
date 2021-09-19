@@ -1,6 +1,44 @@
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
-document.addEventListener("DOMContentLoaded", function(e){
+var productInfo= [];
 
-});
+function mostrarInfo(array){
+
+    let htmlContentToAppend = "";
+
+    for(let i = 0; i < array.length; i++){
+        let imageSrc = array[i];
+
+        htmlContentToAppend += `
+        <div class="col-lg-3 col-md-4 col-6">
+            <div class="d-block mb-4 h-100">
+                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
+            </div>
+        </div>
+        `
+
+        document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
+    }
+}
+    document.addEventListener("DOMContentLoaded", function(e){
+        getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
+            if (resultObj.status === "ok")
+            {
+                productInfo = resultObj.data;
+    
+                let categoryNameHTML  = document.getElementById("categoryName");
+                let categoryDescriptionHTML = document.getElementById("categoryDescription");
+                let precioHTML = document.getElementById("precio");
+                let productosVendidosHTML = document.getElementById("vendidos")
+                let productosCategoryHTML = document.getElementById("category")
+                
+            
+                categoryNameHTML.innerHTML = productInfo.name;
+                categoryDescriptionHTML.innerHTML = productInfo.description;
+                precioHTML.innerHTML = productInfo.cost + productInfo.currency;
+                productosCategoryHTML.innerHTML = productInfo.category;
+                productosVendidosHTML.innerHTML = productInfo.soldCount;
+
+                //Muestro las imagenes en forma de galería
+               mostrarInfo(productInfo.images);
+            }
+        });
+    });

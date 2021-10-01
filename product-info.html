@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
 <html lang="en">
@@ -140,4 +141,148 @@
   <script src="js/estrellas.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="site-header sticky-top py-1 bg-dark">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
+      <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
+      <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
+      <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <a class="py-2 d-none d-md-inline-block" id="nombreUsuario"></a>
+    </div>
+  </nav>
+  <div class="card-group" id="productInfoName"> 
+    <div class="container mt-5">
+      <div class="text-center p-4">
+        <h2>Producto</h2>
+        <p class="lead">Encontrarás aquí toda la información del artículo seleccionado.</p>
+        <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
+          seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
+      </div>
+      <h3 id="categoryName"></h3>
+      <hr class="my-3">
+      <dl>
+        <dt>Descripción</dt>
+        <dd>
+          <p id="categoryDescription"></p>
+        </dd>
+
+        <dt>Precio</dt>
+        <dd>
+          <p id="precio"></p>
+        </dd>
+
+        <dt>Vendidos</dt>
+        <dd>
+          <p id="vendidos"></p>
+        </dd>
+        <dt>Categorías</dt>
+        <dd>
+          <a id="category" href="products.html">Autos</a>
+        </dd>
+        <dt>Imágenes ilustrativas</dt>
+        <dd>
+          <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+          </div>
+        </dd>
+        <dt>Comentarios</dt>
+      <div id="contenedorComentarios" class="w-100"></div>
+      <p></p>
+      </dl>
+    </div>
+    <form class="container w-100">
+      <ul>
+          <div class="container flex-md-row">
+              <div class="card border-dark mb-3">
+                  <div class=" w-100 h-100">
+                    <p></p>
+                      <div class="card-header">Comentar
+                      </div>
+                      <textarea name="mensaje" class="w-100" id="mensaje">  </textarea> <br/><br/>
+
+                      <div class="form-group">
+                        <label for="exampleFormControlSelect1">Calificación</label>
+                        <select id="cantidadestrellas" class="form-control" id="exampleFormControlSelect1">
+                        <option ★>1 </option>
+                        <option ★★>2 </option>
+                        <option ★★★> 3 </option>
+                        <option ★★★★>4 </option>
+                        <option ★★★★★> 5 </option>
+                      </select>
+                    </div>
+                      <!-- <div class="puntuacion">
+                          <input id="radio1" type="radio" name="estrellas" value="5" onclick="document.getElementById('valor').innerHTML='5'">
+                          
+        <label for="radio1">★</label>
+                          
+        <input id="radio2" type="radio" name="estrellas" value="4" onclick="document.getElementById('valor').innerHTML='4'">
+                          
+        <label for="radio2">★</label>
+                          
+        <input id="radio3" type="radio" name="estrellas" value="3" onclick="document.getElementById('valor').innerHTML='3'">
+                         
+        <label for="radio3">★</label>
+                          
+        <input id="radio4" type="radio" name="estrellas" value="2" onclick="document.getElementById('valor').innerHTML='2'">
+                          
+        <label for="radio4">★</label>
+                          
+        <input id="radio5" type="radio" name="estrellas" value="1" onclick="document.getElementById('valor').innerHTML='1'">
+                          
+        <label for="radio5">★</label><br>
+
+                      </div> --><br> Puntuación
+                     <!--  <span id="valor"></span> -->
+
+<br>
+                    <span id="error"class="text-danger"></span>
+                    
+                      <input type="button" value="Enviar ahora" onclick="añadirComment()" />
+                  </div>
+                  </li>
+
+
+              </div>
+
+          </div>
+      </ul>
+  </form>
+    </div>
+  </div>
+  </div>
+</div>
+      <div id="spinner-wrapper"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver productos relacionados</a>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/product-info.js"></script>
+  <script src="js/estrellas.js"></script>
+</body>
+
+>>>>>>> 556533736e1b546f4a37e4c8d79e90515f4b52c6
 </html>

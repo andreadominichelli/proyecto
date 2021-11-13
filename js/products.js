@@ -50,19 +50,17 @@ function mostrarproductos() {
             ((precioMaximo == undefined) || (precioMaximo != undefined && parseInt(productos.cost) <= precioMaximo))) {
 
             htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
+            <div class="md-1 card-container"></div>
+            <a href="product-info.html"class="list-group-item list-group-item-action col-md-3">
+                    <div class="row">
                         <img src="` + productos.imgSrc + `" alt="` + productos.description + `" class="img-thumbnail">
                     </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
+                        <div class="w-100 justify-content-between">
                             <h4 class="mb-1">` + productos.name + `</h4>
                             <small class="text-muted">` + productos.soldCount + ` artículos vendidos</small>
                         </div>
-                        <p class="mb-1">` + productos.description + `</p>
+                        <p class="mb-1" >` + productos.description + `</p>
                         <p class="mb-1">` + productos.cost + productos.currency + `</p>
-                    </div>
                 </div>
             </a>
             `

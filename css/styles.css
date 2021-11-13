@@ -170,4 +170,22 @@ a.custom-card:hover {
       font-weight: 400;
       color: rgb(82, 82, 82);
   }
-  
+  .a + .b {
+    margin-top: 4em;
+  }
+.titulo-boton{
+  margin: 50px;
+  padding-top: 50px;
+}
+.modal-header{
+  padding-right: 50px;
+background-color:rgb(101, 142, 253);
+}
+.modal-title{
+  font-style: inherit;
+  color: aliceblue;
+}
+.direccion{
+  margin-top: 20px;
+ margin-left:  60px;
+}
